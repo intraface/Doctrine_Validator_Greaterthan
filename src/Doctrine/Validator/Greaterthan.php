@@ -27,10 +27,10 @@
  * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        www.phpdoctrine.org
  * @since       1.0
- * @version     
+ * @version
  * @author      Sune Jensen <sj@sunet.dk>
  */
-class Doctrine_Validator_Greaterthan
+class Doctrine_Validator_Greaterthan extends Doctrine_Validator_Driver
 {
     /**
      * Checks than numeric representation of value is greater than set value
@@ -40,7 +40,7 @@ class Doctrine_Validator_Greaterthan
      */
     public function validate($value)
     {
-        
+
         if (intval($value) > intval($this->args)) {
             return true;
         }
