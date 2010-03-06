@@ -40,7 +40,6 @@ class Doctrine_Validator_Greaterthan extends Doctrine_Validator_Driver
      */
     public function validate($value)
     {
-
         if (intval($value) > intval($this->args)) {
             return true;
         }
